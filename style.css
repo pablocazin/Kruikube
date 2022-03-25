@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Sombra";
+  src: url("Asset/Font/FontsFree-Net-Sombra-Black.ttf") format("ttf");
+}
+
+:root {
+  --rouille: #985717;
+  --bleu: rgb(95, 149, 211);
+  --bois: rgb(175, 146, 137);
+  --bghf: rgb(212, 212, 212);
+  --ligne: #ffb400;
+}
+
+.rouille {
+  color: var(--rouille);
+}
+
+.bleu {
+  color: var(--bleu);
+}
+
+.bois {
+  color: var(--bois);
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Sombra;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 130px;
+  background: var(--bghf);
+  margin-bottom: 8vh;
+  position: relative;
+  justify-content: center;
+}
+
+header a img {
+  transition: 300ms;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+header a img:hover {
+  transform: rotate(20deg);
+}
+
+header nav ul {
+  display: flex;
+  gap: 50px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: black;
+  transition: 500ms ease-in-out;
+}
+
+header nav ul li {
+  transition: 250ms;
+}
+
+header nav ul li:hover {
+  transform: scale(1.2);
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.content-container .image-cube {
+  min-width: 80px;
+  min-height: 80px;
+  width: 20vw;
+  height: 20vw;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.content-container .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70vw;
+  max-width: 700px;
+  gap: 10px;
+}
+
+.title {
+  font-size: 40px;
+  text-decoration: none;
+  color: black;
+}
+
+.content p,
+h1 {
+  margin: 0;
+}
+
+.content p {
+  font-size: 20px;
+}
+
+#temoignage-container {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.temoignage {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.temoignage-content {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  gap: 20px;
+}
+
+.temoignage-content h3,
+p {
+  margin: 0;
+}
+
+.temoignage img {
+  width: 200px;
+  height: 200px;
+}
+
+.surlignement {
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.surlignement:hover::before {
+  height: 90%;
+}
+
+.surlignement:before {
+  will-change: transform;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44%;
+  background-color: var(--ligne);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 300px;
+  background: var(--bghf);
+  margin-top: 70px;
+}
+
+.page-description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (max-width: 800px) {
+  header nav ul li a {
+    font-size: 20px;
+  }
+  header {
+    height: 90px;
+  }
+}
